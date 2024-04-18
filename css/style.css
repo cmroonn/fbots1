@@ -1598,6 +1598,14 @@ cart-checkbox span {
     padding: calc(13 / var(--screensize) * 100vw);
   }
 
+  .accounts__row__body__point .selectCustom-trigger, .selectCustom-option {
+    font-size: calc(12 / var(--screensize) * 100vw);
+  }
+
+  .accounts__row__body__point .selectCustom-options {
+    top: calc(27 / var(--screensize)* 100vw + 10 / var(--screensize)* 100vw);
+  }
+
   .selectCustom-trigger::after, .big-btn::after {
     width: calc(46 / var(--screensize)* 100vw);
     height: calc(46 / var(--screensize)* 100vw);
@@ -1733,7 +1741,29 @@ cart-checkbox span {
   .accounts__row__body__point .selectCustom-trigger::after {
     height: calc(34 / var(--screensize) * 100vw);
   }
+
+  form .cart-checkbox {
+    font-size: calc(16 / var(--screensize) * 100vw);
+  }
+
+  .popup h2 {
+    font-size: calc(22 / var(--screensize) * 100vw);
+  }
+
+  .signin__form__field span {
+    font-size: calc(14 / var(--screensize) * 100vw);
+  }
+
+  .popup {
+    padding: calc(20 / var(--screensize) * 100vw);
+    width: calc(320 / var(--screensize) * 100vw);
+  }
 }
+
+form .cart-checkbox {
+  margin-bottom: calc(20 / var(--screensize) * 100vw);
+}
+
 
 .overlay {
   background-color: rgba(0, 0, 0, .6);

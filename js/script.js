@@ -227,6 +227,21 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   try {
+    const popup = document.getElementById("create-account");
+    const overlay = document.querySelector('.overlay');
+    const btn = document.querySelectorAll('.open-create-popup');
+
+    btn.forEach(function(elem) {
+      elem.addEventListener("click", function(e) {
+        popup.classList.add('active');
+        overlay.classList.add("active");
+      });
+    });
+  } catch (e) {
+    console.log(e);
+  }
+
+  try {
     const btn = document.querySelector(".add-account-session");
     const elem = document.querySelector(".pc__accounts__body");
     const normalBtn = document.querySelector(".pc__accounts__body__normal-mode");
