@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register | Fbots</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="main">
+    <div class="signin-wrapper">
+        <div class="signin">
+            <img src="images/signin_icon.svg" alt="" class="signin__icon">
+            <h1 class="signin__heading">Register</h1>
+
+            <form class="signin__form">
+                <label class="signin__form__field">
+                    <span>Name</span>
+                    <span class="signin__form__field__input">
+                        <img src="images/login_icon.svg" alt="">
+                        <input type="text" placeholder="Enter your name" name="name">
+                    </span>
+                </label>
+
+                <label class="signin__form__field">
+                    <span>Phone</span>
+                    <span class="signin__form__field__input">
+                        <img src="images/phone_icon.svg" alt="">
+                        <input type="text" id="phone-mask" placeholder="Enter your phone" name="phone">
+                    </span>
+                </label>
+
+                <label class="signin__form__field">
+                    <span>Login</span>
+                    <span class="signin__form__field__input">
+                        <img src="images/login_icon.svg" alt="">
+                        <input type="text" placeholder="Enter your login" name="login">
+                    </span>
+                </label>
+
+                <label class="signin__form__field">
+                    <span>Password</span>
+                    <span class="signin__form__field__input">
+                        <img src="images/lock_icon.svg" alt="">
+                        <input type="password" placeholder="*******" name="password">
+                    </span>
+                </label>
+
+                <label class="signin__form__field">
+                    <span>Confirm password</span>
+                    <span class="signin__form__field__input">
+                        <img src="images/lock_icon.svg" alt="">
+                        <input type="password" placeholder="*******" name="confirm-pass">
+                    </span>
+                </label>
+
+                <a href="#" class="signin__forgot">Forgot your password?</a>
+
+                <button class="basic-btn signin__submit" type="submit">
+                    Register
+                </button>
+            </form>
+
+            <p class="signin__register">
+                Have an Account? <a href="#">Sign in</a>
+            </p>
+        </div>
+    </div>
+</main>
+
+
+<script src="https://unpkg.com/imask"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

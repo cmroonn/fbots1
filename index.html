@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign in | Fbots</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="main">
+    <div class="signin-wrapper">
+        <div class="signin">
+            <img src="images/signin_icon.svg" alt="" class="signin__icon">
+            <h1 class="signin__heading">Sign in</h1>
+
+            <form class="signin__form">
+                <label class="signin__form__field">
+                    <span>Login</span>
+                    <span class="signin__form__field__input">
+                    <img src="images/login_icon.svg" alt="">
+                    <input type="text" placeholder="Enter your Login" name="login">
+                </span>
+                </label>
+
+                <label class="signin__form__field">
+                    <span>Password</span>
+                    <span class="signin__form__field__input">
+                    <img src="images/lock_icon.svg" alt="">
+                    <input type="password" placeholder="*******" name="password">
+                </span>
+                </label>
+
+                <a href="#" class="signin__forgot">Forgot your password?</a>
+
+                <button class="basic-btn signin__submit" type="submit">
+                    Login
+                </button>
+            </form>
+
+            <p class="signin__register">
+                Don’t have an Account? <a href="#">Register</a>
+            </p>
+        </div>
+    </div>
+</main>
+
+<script src="https://unpkg.com/imask"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
