@@ -63,6 +63,13 @@ button {
   width: 100%;
   padding: calc(17 / var(--screensize) * 100vw) 0;
   font-weight: 700;
+  transition: .2s ease;
+}
+
+.basic-btn:hover {
+  transition: .2s ease;
+  background-color: #fff;
+  color: #7441FF;
 }
 
 .signin {
@@ -335,17 +342,17 @@ span.signin__form__field__input img {
   position: absolute;
   top: 0;
   left: 0;
-  display: none;
+  display: block;
 }
 
-@media (hover: hover) {
+/* @media (hover: hover) {
   .selectCustom {
     display: block;
   }
   .selectNative:focus + .selectCustom {
     display: none;
   }
-}
+} */
 /* Add the focus states too, They matter, always! */
 .selectNative:focus,
 .selectCustom.isActive .selectCustom-trigger {
@@ -556,6 +563,9 @@ span.signin__form__field__input img {
   font-size: calc(18 / var(--screensize) * 100vw);
   margin-bottom: calc(10 / var(--screensize) * 100vw);
   font-weight: 500;
+}
+
+.pc__accounts__body__row span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -896,7 +906,8 @@ cart-checkbox span {
   -webkit-box-flex: 0;
   -ms-flex: 0;
   flex: 0;
-  background-color: #7441FF;
+  background-color: none;
+  border: 2px solid #fff;
   background-repeat: no-repeat;
   background-position: center center;
   border-radius: 4px;
@@ -906,6 +917,7 @@ cart-checkbox span {
   background-image: url("../images/tick_icon.svg");
   background-color: #7441FF;
   background-size: 50%;
+  border-color: #7441FF;
 }
 
 .new-account__plate .select {
@@ -1011,7 +1023,7 @@ cart-checkbox span {
 
 .accounts__body {
   display: flex;
-  margin-top: calc(68 / var(--screensize) * 100vw);
+  margin-top: calc(30 / var(--screensize) * 100vw);
 }
 .accounts__plate {
   background-color: #2D2C51;
@@ -1064,7 +1076,17 @@ cart-checkbox span {
   justify-content: space-between;
   align-items: center;
   margin-bottom: calc(15 / var(--screensize) * 100vw);
+}
 
+.accounts__row__body span.signin__form__field__input input, .accounts__row__body__point .selectNative, .accounts__row__body__point .selectCustom {
+  height: calc(38 / var(--screensize) * 100vw);
+  width: calc(160 / var(--screensize) * 100vw);
+}
+.accounts__row__body__point .selectCustom-trigger {
+  padding: calc(8 / var(--screensize) * 100vw) 0.8rem;
+}
+.accounts__row__body__point .selectCustom-trigger::after {
+  height: calc(38 / var(--screensize) * 100vw);
 }
 
 .accounts__row__body__point:last-child {
@@ -1168,7 +1190,171 @@ cart-checkbox span {
   color: #B296FF;
 }
 
+.pc__accounts .pc__session__body {
+  display: none;
+}
+
+.popup {
+  background-color: #2D2C51;
+  border-radius: calc(10 / var(--screensize) * 100vw);
+  padding: calc(40 / var(--screensize) * 100vw) calc(60 / var(--screensize) * 100vw);
+}
+
+.popup h2 {
+  font-size: calc(30 / var(--screensize) * 100vw);
+  margin: 0 0 calc(20 / var(--screensize) * 100vw);
+}
+
+.popup p {
+  font-size: calc(18 / var(--screensize) * 100vw);
+  color: #BAAEE0;
+  margin-bottom: calc(30 / var(--screensize) * 100vw);
+}
+
+.secondary-btn {
+  background: #252742;
+  color: #fff;
+  transition: .2s ease;
+  border: none;
+  width: 100%;
+  height: calc(54 / var(--screensize) * 100vw);
+  border-radius: calc(50 / var(--screensize)* 100vw);
+  margin-top: calc(10 / var(--screensize) * 100vw);
+}
+
+.secondary-btn:hover {
+  transition: .2s ease;
+  opacity: .4;
+}
+
+.popup-wrapper {
+  position: fixed;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: .2s ease;
+  z-index: -1;
+}
+
+.popup-wrapper.active {
+  top: 50%;
+  opacity: 1;
+  z-index: 10;
+  transition: .2s ease;
+}
+
+.close-popup-btn {
+  position: absolute;
+  top: calc(20 / var(--screensize) * 100vw);
+  right: calc(20 / var(--screensize) * 100vw);
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.close-popup-btn svg {
+  width: calc(20 / var(--screensize) * 100vw);
+  height: calc(20 / var(--screensize) * 100vw);
+} 
+.search-accounts {
+  position: relative;
+  margin-bottom: calc(20 / var(--screensize) * 100vw);
+}
+.search-accounts .signin__form__field__input:after {
+  content: "";
+  background-image: url("../images/search-icon.svg");
+  width: calc(20 / var(--screensize) * 100vw);
+  height: calc(20 / var(--screensize) * 100vw);
+  display: block;
+  position: absolute;
+  background-size: cover;
+  right: calc(20 / var(--screensize) * 100vw);
+}
+
+.pc__accounts__body .search-accounts,
+.pc__accounts__body .pc__accounts__body__row span:last-child,
+.pc__accounts__body .pc__accounts__body__btns  {
+  display: none;
+}
+
+
+.pc__accounts__body.edit-mode .search-accounts, 
+.pc__accounts__body.edit-mode .pc__accounts__body__row span:last-child,
+.pc__accounts__body.edit-mode .pc__accounts__body__btns  {
+  display: block;
+}
+
+.pc__accounts__body.edit-mode .pc__accounts__body__row span:first-child {
+  display: none;
+}
+
+.pc__accounts__body.edit-mode .scroll-area-wrap {
+  background-color: #191A2B;
+}
+
+.pc__accounts__body .cart-checkbox span:before {
+  width: calc(18 / var(--screensize) * 100vw);
+  height: calc(18 / var(--screensize) * 100vw);
+}
+
+.pc__accounts__body .cart-checkbox {
+  font-size: calc(18 / var(--screensize) * 100vw);
+}
+
+.pc__accounts__body .cart-checkbox input:checked + span {
+  color: #B296FF;
+}
+
+.pc__accounts__body__btns {
+  margin-top: calc(20 / var(--screensize) * 100vw);
+}
+
+.accounts__stats {
+  width: calc(400 / var(--screensize) * 100vw);
+  display: block;
+  margin-bottom: calc(30 / var(--screensize) * 100vw);
+}
+.accounts__invalid {
+  color: #FF0000;
+  font-size: calc(18 / var(--screensize) * 100vw);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.accounts__invalid svg {
+  margin-right: calc(10 / var(--screensize) * 100vw);
+}
+
+.accounts__subhead {
+  margin-top: calc(15 / var(--screensize) * 100vw);
+}
+
+.accounts__subhead__create {
+  display: none;
+}
+
+.js-selectCustom.isActive .selectCustom-trigger::after {
+  background-color: #7441FF;
+}
 @media (max-width: 500px) {
+
+  .accounts__subhead {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .accounts__subhead__create {
+    display: block;
+    color: #B296FF;
+    text-decoration: underline;
+    font-size: calc(14 / var(--screensize) * 100vw);
+  }
+
+  .pc__accounts .pc__session__body {
+    display: block;
+  }
   .menu {
     display: none;
   }
@@ -1380,7 +1566,12 @@ cart-checkbox span {
   .accounts__plate {
     width: 100%;
     padding: calc(20 / var(--screensize) * 100vw);
-    margin-bottom: calc(10 / var(--screensize) * 100vw);
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .accounts__plate:last-child {
+    padding-top: 0;
   }
 
   .accounts__row__head button {
@@ -1505,6 +1696,42 @@ cart-checkbox span {
   .setup-module-wrap iframe {
     width: 100%;
     height: auto;
+  }
+
+  .new-account__plate {
+    width: 100%;
+    padding: calc(20 / var(--screensize) * 100vw);
+  }
+
+  .new-account__plate h2 {
+    font-size: calc(22 / var(--screensize) * 100vw);
+  }
+
+  .accounts__stats {
+    width: 100%;
+  }
+
+  .accounts__save {
+    width: calc(320 / var(--screensize) * 100vw);
+    position: fixed;
+    bottom: calc(15 / var(--screensize) * 100vw);
+  }
+
+  .accounts {
+    padding-bottom: calc(60 / var(--screensize) * 100vw);
+  }
+
+  .accounts__invalid {
+    font-size: calc(14 / var(--screensize) * 100vw);
+  }
+
+  .accounts__row__body span.signin__form__field__input input, .accounts__row__body__point .selectNative, .accounts__row__body__point .selectCustom  {
+    height: calc(34 / var(--screensize) * 100vw);
+    width: calc(116 / var(--screensize) * 100vw);
+  }
+
+  .accounts__row__body__point .selectCustom-trigger::after {
+    height: calc(34 / var(--screensize) * 100vw);
   }
 }
 

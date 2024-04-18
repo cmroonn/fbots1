@@ -334,6 +334,7 @@
 
         <div class="content-wrapper">
             <div class="accounts">
+                <img src="images/frame.png" alt="" class="accounts__stats">
                 <div class="accounts__head">
                     <div class="select">
                         <div class="selectWrapper">
@@ -370,6 +371,20 @@
                     </button>
                 </div>
 
+                <div class="accounts__subhead">
+                    <div class="accounts__invalid">
+                        <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.7368 1.11C9.44846 0.564998 8.5518 0.564998 8.26346 1.11L0.763462 15.2767C0.695948 15.4036 0.662478 15.5459 0.666312 15.6897C0.670146 15.8335 0.711154 15.9738 0.78534 16.097C0.859525 16.2202 0.964359 16.322 1.08963 16.3927C1.21489 16.4633 1.35632 16.5003 1.50013 16.5H16.5001C16.6438 16.5003 16.7852 16.4634 16.9104 16.3928C17.0355 16.3222 17.1403 16.2204 17.2144 16.0972C17.2885 15.9741 17.3295 15.8339 17.3332 15.6902C17.337 15.5465 17.3035 15.4044 17.236 15.2775L9.7368 1.11ZM9.83346 14H8.1668V12.3333H9.83346V14ZM8.1668 10.6667V6.5H9.83346L9.8343 10.6667H8.1668Z" fill="#FF0000"/>
+                        </svg>
+                        
+                        Invalid password
+                    </div>
+
+                    <a href="#" class="accounts__subhead__create">
+                        Create an account
+                    </a>
+                </div>
+
 
                 <div class="accounts__body">
                     <div class="accounts__plate">
@@ -392,19 +407,45 @@
                                 <div class="accounts__row__body__point">
                                     <span>Black market</span>
 
-                                    <label class="checkbox-ios">
-                                        <input type="checkbox">
-                                        <span class="checkbox-ios-switch"></span>
-                                    </label>
+                                    <div class="select">
+                                        <div class="selectWrapper">
+                                            <select class="selectNative js-selectNative">
+                                                <option value="sel" disabled="" selected="">off</option>
+                                                <option value="ds">on</option>
+                                            </select>
+                
+                                            <div class="selectCustom js-selectCustom">
+                                                <div class="selectCustom-trigger">off</div>
+                                                <div class="selectCustom-options">
+                                                    <div class="selectCustom-option" data-value="sel">off</div>
+                                                    <div class="selectCustom-option" data-value="ds">on</div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="accounts__row__body__point">
                                     <span>Black market. Number of clicks</span>
 
-                                    <label class="checkbox-ios">
-                                        <input type="checkbox">
-                                        <span class="checkbox-ios-switch"></span>
-                                    </label>
+                                    <div class="select">
+                                        <div class="selectWrapper">
+                                            <select class="selectNative js-selectNative">
+                                                <option value="sel" selected="">off</option>
+                                                <option value="ds">on</option>
+                                            </select>
+                
+                                            <div class="selectCustom js-selectCustom">
+                                                <div class="selectCustom-trigger">off</div>
+                                                <div class="selectCustom-options">
+                                                    <div class="selectCustom-option" data-value="sel">off</div>
+                                                    <div class="selectCustom-option" data-value="ds">on</div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="accounts__row__body__point">
@@ -880,9 +921,10 @@
                                 <div class="accounts__row__body__point">
                                     <span>Black market</span>
 
-                                    <label class="checkbox-ios">
-                                        <input type="checkbox">
-                                        <span class="checkbox-ios-switch"></span>
+                                    <label class="signin__form__field">
+                                        <span class="signin__form__field__input">
+                                            <input type="text" placeholder="login" name="login">
+                                        </span>
                                     </label>
                                 </div>
 
